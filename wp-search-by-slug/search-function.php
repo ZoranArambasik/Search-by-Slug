@@ -10,9 +10,7 @@ function search_by_slug($search, $wp_query) {
     }
     $query = $wp_query->query_vars;
     $search_string = $query['s'];
-    // var_dump($search_string); - remove this after checking!!!
     $like = !empty($query['exact']) ? '' : '%';
-    // var_dump($like); - remove this after checking!!!
     if( 'slug:' === mb_substr( trim( $search_string ), 0, 5 ) && 'slug:' !== $search_string )  {
         $search =
         $and = '';
